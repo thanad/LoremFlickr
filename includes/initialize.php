@@ -10,15 +10,15 @@ date_default_timezone_set("America/Sao_Paulo"); //Or whatever you fancy
 $site["URL"] = ""; //Website URL
 $site["name"] = ""; //Website name
 $site["folder"] = "/"; //Folder from website root.
-$site["path"] = "/path/to/root"; //Path from server root. No trailing slash.
+$site["path"] = "/var/www/html"; //Path from server root. No trailing slash.
 $site["imageCache"] = "cache/images/"; //Cache location from $site["folder"]
 $site["filterSwitches"] = "|g|p|red|green|blue|o|"; //Available switches
 
 $site["sizes"] = array("o", "l", "c", "z", "n"); //Available Flickr sizes
 
 //phpFlickr settings
-$site["flickr"]["key"] = ""; //Flickr key
-$site["flickr"]["secret"] = ""; //Flickr secret
+$site["flickr"]["key"] = getenv("FLICKR_KEY"); //Flickr key
+$site["flickr"]["secret"] = getenv("FLICKR_SECRET"); //Flickr secret
 $site["flickr"]["cache"] = "cache/flickrsearch"; //Flickr cache
 $site["flickr"]["cacheduration"] = "".(24 * 60 * 60);
 
