@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:7-apache
 
 ENV FLICKR_KEY KEY
 ENV FLICKR_SECRET SECRET
