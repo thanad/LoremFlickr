@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-1604:201903-01
+      docker_layer_caching: true
+    steps:
+      - checkout
+      - run:
+          name: "Build docker image"
+          command: docker build .
+
+workflows:
+  main:
+    jobs:
+      - build
