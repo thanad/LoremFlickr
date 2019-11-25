@@ -8,6 +8,8 @@ jobs:
     steps:
       - checkout
       - run:
+          environment:
+            TEST: env
           name: "Build docker image"
           command: docker build .
 
