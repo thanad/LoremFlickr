@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-error_reporting(E_ALL); 
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING | E_DEPRECATED));
 ini_set( 'display_errors','1');
 
 date_default_timezone_set("America/Sao_Paulo"); //Or whatever you fancy
